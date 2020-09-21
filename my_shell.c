@@ -12,7 +12,7 @@
 
 char** tokenizeInput(char *input, char* delim)
 {
-	// this functions takes a string as "input" and splits/separates/tokenizes it
+    // this functions takes a string as "input" and splits/separates/tokenizes it
     // into multiple part depending on delimiter "delim"
     // and returns the array cotaining all separate strings or tokens
 	char **cmds = (char**)malloc(sizeof(char*) * MAX_NUM_TOKENS);
