@@ -155,6 +155,8 @@ void executeCommandRedirection(char *input, int seq)
     }
     
     free(tokens);
+    free(cmdTokens);
+    free(outputFile);
 }
 
 
