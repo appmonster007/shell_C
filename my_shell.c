@@ -1,9 +1,9 @@
 #include <stdio.h>              // STDIN, STDOUT, STDERR
 #include <string.h>             // strstr(), strsep(), strcat()
-#include <stdlib.h>			    // exit()
-#include <unistd.h>			    // fork(), getpid(), exec()
+#include <stdlib.h>             // exit()
+#include <unistd.h>             // fork(), getpid(), exec()
 #include <sys/wait.h>           // wait()
-#include <signal.h>			    // signal()
+#include <signal.h>             // signal()
 #include <fcntl.h>              // close(), open()
 #include <sys/stat.h>           // fchmod(), chmod()
 
