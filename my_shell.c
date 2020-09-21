@@ -5,7 +5,8 @@
 #include <sys/wait.h>		    // wait()
 #include <signal.h>			    // signal()
 #include <fcntl.h>	            // close(), open()
-      
+#include <sys/stat.h>
+
 
 #define MAX_NUM_TOKENS 64
 
@@ -135,7 +136,8 @@ void executeCommandRedirection(char *input, int seq)
         // Restore the default behavior for SIGINT signal
         int defaultSTDOUT = dup(fileno(stdout));
         int fd_new_out = open((outputFile[0]), O_CREAT | O_RDWR | O_APPEND);
-        dup2(fd_new_out, fileno(stdout));
+        int permissions = fchmod(fd_new_out, S_IRUSR | S_IWUSR | S_IRGRP | S_IROTH);
+            dup2(fd_new_out, fileno(stdout));
 
         int execution = execvp(cmdTokens[0], cmdTokens);
 
