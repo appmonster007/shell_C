@@ -1,11 +1,11 @@
-#include <stdio.h>
-#include <string.h>
+#include <stdio.h>              // STDIN, STDOUT, STDERR
+#include <string.h>             // strstr(), strsep(), strcat()
 #include <stdlib.h>			    // exit()
 #include <unistd.h>			    // fork(), getpid(), exec()
-#include <sys/wait.h>		    // wait()
+#include <sys/wait.h>           // wait()
 #include <signal.h>			    // signal()
-#include <fcntl.h>	            // close(), open()
-#include <sys/stat.h>
+#include <fcntl.h>              // close(), open()
+#include <sys/stat.h>           // fchmod(), chmod()
 
 
 #define MAX_NUM_TOKENS 64
